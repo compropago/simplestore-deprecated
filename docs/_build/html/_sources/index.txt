@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Compropago ComproPago, PHP API client (PHP-SDK)
-===============================================
+Compropago, PHP API client (PHP-SDK)
+====================================
 .. toctree::
    :maxdepth: 2
 
