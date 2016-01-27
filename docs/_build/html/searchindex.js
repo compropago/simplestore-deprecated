@@ -1,1 +1,0 @@
-Search.setIndex({envversion:46,filenames:["index"],objects:{},objnames:{},objtypes:{},terms:{"\u00cdndic":0,Busqued:0,Contents:0,Modul:0,Pagin:0},titles:["Welcome to compropago&#8217;s documentation!"],titleterms:{Indic:0,Welcom:0,and:0,compropag:0,documentation:0,tabl:0}})
