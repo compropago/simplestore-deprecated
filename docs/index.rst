@@ -57,10 +57,12 @@ Para instalar la última versión **Estable de la SDK**, ejecuta el comando de C
    composer dumpautoload -o
 
 O agregando manualmente al archivo composer.json
+
 .. code-block::
    "require": { 
          "compropago/php-sdk":"^1.0"
       }
+
 
 .. code-block::
    composer install
