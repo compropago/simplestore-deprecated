@@ -39,12 +39,18 @@
             
   <div class="section" id="compropago-compropago-php-api-client-php-sdk">
 <h1>Compropago ComproPago, PHP API client (PHP-SDK)<a class="headerlink" href="#compropago-compropago-php-api-client-php-sdk" title="Enlazar permanentemente con este título">¶</a></h1>
-<p>Contents:</p>
 <div class="toctree-wrapper compound">
 <ul class="simple">
 </ul>
 </div>
+<div class="section" id="descripcion">
+<h2>Descripción<a class="headerlink" href="#descripcion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>La librería de ComproPago-PHP le permite interactuar con el API de ComproPago en su aplicación.  También cuenta con los métodos necesarios para facilitarle su desarrollo por medio de los servicios y vistas más utilizados (SDK).</p>
+<p>Con ComproPago puede recibir pagos en OXXO, 7Eleven y muchas tiendas más en todo México.</p>
+<p><a class="reference external" href="https://compropago.com">Registrarse en ComproPago</a></p>
 </div>
+</div>
+<hr class="docutils" />
 <div class="section" id="indice-de-contenidos">
 <h1>Índice de Contenidos<a class="headerlink" href="#indice-de-contenidos" title="Enlazar permanentemente con este título">¶</a></h1>
 <ul class="simple">
@@ -52,12 +58,6 @@
 <li><a class="reference internal" href="py-modindex.html"><span>Índice de Módulos</span></a></li>
 <li><a class="reference internal" href="search.html"><span>Página de Búsqueda</span></a></li>
 </ul>
-</div>
-<div class="section" id="descripcion">
-<h1>Descripción<a class="headerlink" href="#descripcion" title="Enlazar permanentemente con este título">¶</a></h1>
-<p>La librería de ComproPago-PHP le permite interactuar con el API de ComproPago en su aplicación.  También cuenta con los métodos necesarios para facilitarle su desarrollo por medio de los servicios y vistas más utilizados (SDK).</p>
-<p>Con ComproPago puede recibir pagos en OXXO, 7Eleven y muchas tiendas más en todo México.</p>
-<p><a class="reference external" href="https://compropago.com">Registrarse en ComproPago</a></p>
 </div>
 <div class="section" id="requerimientos">
 <h1>Requerimientos<a class="headerlink" href="#requerimientos" title="Enlazar permanentemente con este título">¶</a></h1>
@@ -76,9 +76,30 @@
 <li><a class="reference external" href="https://getcomposer.org/doc/00-intro.md">Cómo instalar Composer?</a></li>
 </ul>
 <p>Para instalar la última versión <strong>Estable de la SDK</strong>, ejecuta el comando de Composer:</p>
+<div class="code highlight-python"><div class="highlight"><pre>composer require compropago/php-sdk
+</pre></div>
+</div>
+<p>Posteriormente o en caso de erro de carga de archivos, volvemos a crear el autoload:</p>
+<div class="highlight-python"><div class="highlight"><pre>composer dumpautoload -o
+</pre></div>
+</div>
 <p>O agregando manualmente al archivo composer.json</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="s2">&quot;require&quot;</span>: <span class="o">{</span>
+      <span class="s2">&quot;compropago/php-sdk&quot;</span>:<span class="s2">&quot;^1.0&quot;</span>
+   <span class="o">}</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre>composer install
+</pre></div>
+</div>
 <p>Después de la instalación para poder hacer uso de la librería es <strong>necesario incluir</strong> el autoloader de Composer:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">require</span> <span class="s1">&#39;vendor/autoload.php&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
 <p>Para actualizar el SDK de ComproPago a la última versión estable ejecutar:</p>
+<div class="highlight-bash"><div class="highlight"><pre>composer update
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -90,9 +111,11 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="#">Tabla de Contenidos</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Compropago ComproPago, PHP API client (PHP-SDK)</a></li>
-<li><a class="reference internal" href="#indice-de-contenidos">Índice de Contenidos</a></li>
+<li><a class="reference internal" href="#">Compropago ComproPago, PHP API client (PHP-SDK)</a><ul>
 <li><a class="reference internal" href="#descripcion">Descripción</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indice-de-contenidos">Índice de Contenidos</a></li>
 <li><a class="reference internal" href="#requerimientos">Requerimientos</a></li>
 <li><a class="reference internal" href="#instalacion-compropago-sdk">Instalación ComproPago SDK</a><ul>
 <li><a class="reference internal" href="#instalacion-usando-composer">Instalación usando Composer</a></li>

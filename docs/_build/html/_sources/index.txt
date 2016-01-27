@@ -5,13 +5,18 @@
 
 Compropago ComproPago, PHP API client (PHP-SDK)
 ===============================================
-
-Contents:
-
 .. toctree::
    :maxdepth: 2
 
+Descripción
+-----------
+La librería de ComproPago-PHP le permite interactuar con el API de ComproPago en su aplicación.  También cuenta con los métodos necesarios para facilitarle su desarrollo por medio de los servicios y vistas más utilizados (SDK). 
 
+Con ComproPago puede recibir pagos en OXXO, 7Eleven y muchas tiendas más en todo México.
+
+`Registrarse en ComproPago <https://compropago.com>`_
+
+--------------------------------
 
 Índice de Contenidos
 ====================
@@ -21,13 +26,6 @@ Contents:
 * :ref:`search`
 
 
-Descripción
-===========
-La librería de ComproPago-PHP le permite interactuar con el API de ComproPago en su aplicación.  También cuenta con los métodos necesarios para facilitarle su desarrollo por medio de los servicios y vistas más utilizados (SDK). 
-
-Con ComproPago puede recibir pagos en OXXO, 7Eleven y muchas tiendas más en todo México.
-
-`Registrarse en ComproPago <https://compropago.com>`_
 
 Requerimientos
 ==============
@@ -48,40 +46,43 @@ La manera recomenda de instalar la SDK de ComproPago es por medio de `Composer <
 
 Para instalar la última versión **Estable de la SDK**, ejecuta el comando de Composer:
 
-.. code-block::
+.. code::
 
    composer require compropago/php-sdk
  
- Posteriormente o en caso de erro de carga de archivos, volvemos a crear el autoload:
+Posteriormente o en caso de erro de carga de archivos, volvemos a crear el autoload:
    
-.. code-block::
+::
 
    composer dumpautoload -o
 
+  
 O agregando manualmente al archivo composer.json
 
-.. code-block::
+.. code-block:: bash
 
    "require": { 
          "compropago/php-sdk":"^1.0"
       }
 
 
-.. code-block::
+
+:: 
 
    composer install
 
 
 Después de la instalación para poder hacer uso de la librería es **necesario incluir** el autoloader de Composer:
+  
+.. code-block:: php
 
-.. code-block::
-
-   require 'vendor/autoload.php';
+    require 'vendor/autoload.php';
 
 
 Para actualizar el SDK de ComproPago a la última versión estable ejecutar:
 
-.. code-block::
+.. code-block:: bash
 
    composer update
- 
+
+   
