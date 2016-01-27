@@ -6,8 +6,6 @@
 Compropago, PHP API client (PHP-SDK)
 ====================================
 
-.. toctree::
-   :maxdepth: 2
 
 Descripción
 -----------
@@ -17,10 +15,11 @@ Con ComproPago puede recibir pagos en OXXO, 7Eleven y muchas tiendas más en tod
 
 `Registrarse en ComproPago <https://compropago.com>`_
 
---------------------------------
-
 Índice de Contenidos
 ====================
+
+.. toctree::
+   :maxdepth: 2
 
 * :ref:`genindex`
 * :ref:`modindex`
