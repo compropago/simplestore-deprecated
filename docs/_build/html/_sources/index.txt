@@ -3,9 +3,11 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. toctree::
+   :maxdepth: 2   
+
 Compropago, PHP API client (PHP-SDK)
 ====================================
-
 
 Descripción
 -----------
@@ -17,9 +19,6 @@ Con ComproPago puede recibir pagos en OXXO, 7Eleven y muchas tiendas más en tod
 
 Índice de Contenidos
 ====================
-
-.. toctree::
-   :maxdepth: 2
 
 * :ref:`genindex`
 * :ref:`modindex`
