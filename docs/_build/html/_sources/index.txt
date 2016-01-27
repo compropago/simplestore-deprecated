@@ -5,6 +5,7 @@
 
 Compropago, PHP API client (PHP-SDK)
 ====================================
+
 .. toctree::
    :maxdepth: 2
 
