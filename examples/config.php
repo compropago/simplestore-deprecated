@@ -23,16 +23,13 @@
 // composer dumpautoload -o
 require dirname(__FILE__).'/../vendor/autoload.php';
 
-$compropagoConfig= array(
-	
-		
+$compropagoConfig= array(	
 		//Llave pública
 		'publickey'=>'pk_test_TULLAVEPUBLICA',
 		//Llave privada
 		'privatekey'=>'sk_test_TULLAVEPRIVADA',
 		//Esta probando?, utilice  'live'=>false
-		'live'=>true
-
+		'live'=>true 
 );
 // Instancia del Client, su utiliza mayormente para el uso del SDK
 $compropagoClient= new Compropago\Client($compropagoConfig);

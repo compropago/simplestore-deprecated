@@ -33,15 +33,9 @@
           <div class="sidebar-module">
             <h4>Ejemplos</h4>
             <ol class="list-unstyled">
-              <li><a href="#">Incorporando</a></li>
+              <li><a href="checkout.php">Proceso de Check Out</a></li>
              
             </ol>
           </div>
-          <div class="sidebar-module">
-            <h4>CookBook</h4>
-            <ol class="list-unstyled">
-              <li><a href="#">Simple Checkout</a></li>
-             
-            </ol>
-          </div>
+         
         </div><!-- /.blog-sidebar -->
