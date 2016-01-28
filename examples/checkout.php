@@ -127,7 +127,8 @@
 					    ?>
 			  			  
 			  		<input type="hidden" name="orderTotal" value="<?php echo $orderTotal;?>">	  
-			  		<input type="submit" value="Generar Orden">	  
+			  		<input type="submit" value="Generar Orden">	
+			  		  
 				    </form>
 				 </p>
 			    
