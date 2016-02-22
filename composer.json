@@ -1,5 +1,22 @@
 {
+    "name": "compropago/simplestore",
+    "type": "library",
+    "description": "Simplestore usando el SDK de compropago",
+    "keywords": ["pagos internet","payment gateway"],
+    "homepage": "https://compropago.com/documentacion/librerias",
+    "license": "Apache-2.0",
+    "authors": [
+      {
+        "name": "Eduardo Aguilar",
+        "email": "eduardo.aguilar@compropago.com"
+      }
+    ],
     "require": {
-        "compropago/php-sdk": "^1.0"
+      "compropago/php-sdk": "^1.1",
+      "php": ">=5.5"
+    },
+
+    "autoload": {
+      "psr-4": {"Compropago\\Simplestore\\": "src/"}
     }
 }
