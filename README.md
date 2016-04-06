@@ -5,6 +5,7 @@ Compropago simplestore es un ejemplo de la implementación nativa de el [php-sdk
 de Compropago, en la cual se muestra el proseso claro de checkout y sus pasos.
 
 ## Requerimientos
+* [Compropago php-sdk >= 1.1.0][compropago-link]
 * [Composer][composer-link]
 * [PHP >= 5.5](http://www.php.net/)
 * [PHP JSON extension](http://php.net/manual/en/book.json.php)
