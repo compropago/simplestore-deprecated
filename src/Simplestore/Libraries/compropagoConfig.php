@@ -14,10 +14,10 @@
  */
 $compropagoConfig = array(
     # Llave publica generada por compropago
-    'publickey'=>'pk_test_8781245a88240f9cf',
+    'publickey'=>'pk_test_XXXXXXXXXXXXXXXXX',
 
     # Llave privada gerada por compropago
-    'privatekey'=>'sk_test_56e31883637446b1b',
+    'privatekey'=>'sk_test_XXXXXXXXXXXXXXXXX',
 
     # Estas generando pruebas? si no es asi cambia el valor a 'true'
     'live'=>false
