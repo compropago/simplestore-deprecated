@@ -10,7 +10,7 @@ error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
 # Llamada a la auto carga de clases
-require_once __DIR__ . "/../vendor/autoload.php";
+require_once __DIR__ . "/../../../autoload.php";
 
 
 /**
@@ -45,7 +45,7 @@ include_once __DIR__ . "/../src/Simplestore/Libraries/displayConfig.php";
     <link rel="stylesheet" href="../assets/css/skeleton.css">
     <link rel="stylesheet" href="../assets/css/normalize.css">
     <link rel="stylesheet" href="../assets/css/main-style.css">
-    <link rel="stylesheet" href="../vendor/compropago/php-sdk/assets/css/compropago.css">
+    <link rel="stylesheet" href="../../php-sdk/assets/css/compropago.css">
 
     <!-- INCLUCION DE LOS EVENTOS DE CONTROL DE SIMPLE STORE AJAX -->
     <script src="../assets/js/jquery-2.2.0.min.js"></script>
