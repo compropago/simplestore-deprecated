@@ -1,10 +1,2 @@
-.buildpath
-.project
-.settings
-composer.lock
-dev-notes
-vendor
+.idea/
 .DS_Store
-phpunit.xml
-.pydevproject
-

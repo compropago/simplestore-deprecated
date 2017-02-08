@@ -1,12 +1,10 @@
-# Compropago Simplestore v1.0.0
+# Compropago Simplestore
 
 ## Descripción
 Compropago simplestore es un ejemplo de la implementación nativa de el [php-sdk](https://github.com/compropago/compropago-php)
 de Compropago, en la cual se muestra el proseso claro de checkout y sus pasos.
 
 ## Requerimientos
-* [Compropago php-sdk >= 1.1.0][compropago-link]
-* [Composer][composer-link]
 * [PHP >= 5.5](http://www.php.net/)
 * [PHP JSON extension](http://php.net/manual/en/book.json.php)
 * [PHP cURL extension](http://php.net/manual/en/book.curl.php)
@@ -14,123 +12,58 @@ de Compropago, en la cual se muestra el proseso claro de checkout y sus pasos.
 ## Estructura
 
 ### Librerias utilizadas
-| Libreria           | Metodo de instalación       | Pakage               | Enlaces                 |
-|--------------------|-----------------------------|----------------------|-------------------------| 
-| Compropago php-sk  | [Composer][composer-link]   | `compropago/php-sdk` | [LINK][compropago-link] |
-| Skeleton framework | Sourcecode                  |                      | [LINK][skeleton-link]   |
-| JQuery             | Sourcecode                  |                      | [LINK][jquery-link]     |
+| Libreria            | Metodo de instalación       | Pakage               | Version | Enlaces                  |
+|---------------------|-----------------------------|----------------------|---------|--------------------------| 
+| Compropago php-sdk  | [Composer][composer-link]   | `compropago/php-sdk` | 3.0.3   | [LINK][compropago-link]  |
+| Milligram framework | [Bower][bower-link]         | `milligram`          | 1.3.0   | [LINK][milligram-link]   |
+| JQuery              | [Bower][bower-link]         | `jquery`             | 3.1.1   | [LINK][jquery-link]      |
 
 
 ### Estructura de carpetas
 
 #### Carpeta *assets*
-Contiene todo el codigo de estilos CSS, librerias JS y las imegenes que se ocupan para darle presentacion al `Simplestore`.
-Aquí es donde se encutran tambien las librerias de Skeleton y Jquery.
-##### Subcarpetas
-* css
-* img
-* js
+Contiene todo el codigo de estilos CSS y librerias JS que fueron instaladas mediante el gestor **Bower**.
 
-#### Carpeta *src*
-Contiene todo el codigo PHP que se encarga de controlar el proceso de Checkout, junto con las configuraciones necesarias
-para su funcionamiento.
-##### Subcarpetas
-* Simplestore
-  * Controllers
-  * Libraries
-  * Utils
+#### Carpeta *vendor*
+Contiene el codigo del SDK de PHP que fue instalado mediante el gestor de **Composer**
+
+#### Carpeta *controllers*
+Contiene los dos controladores de la aplicacion, **GenerateOrderController** y **WebhookController**
+* **WebhookController:** Controlador encargado de recibir las peticiones de cambio de estatus de la aplicacion para su gestion interna.
+* **GenerateOrderController:** Controlador encargado de generar las ordenes de pago conforme a la información recavada en el formulario
   
 #### Carpeta *views*
-Contiene a `index.php` que es el archivo prinsipal de `Compropago Simplestore`. 
+Contiene las vistas post generacion de orden, como lo son la vista de errores y el success que mostrara el recibo de pago de cada orden.
 
-#### Anotaciones importantes
-`Compropago Simplestore` usa como dependencia `compropago/php-sdk` por lo cual el codigo de esta dependencia no se encuntra
-visible dentro de estos archivos, es descargado por el gestor de dependencias de `composer` al instalar Compropago Simplestore
+#### Carpeta *css*
+Carpeta con los archivos de estilos custom fuera de el Framework de **Miligram**
 
-## Instalación
-`Compropago Simplestore` debe ser instalado mediante composer, esto permitira tener una experiencia `Out of the box` de esta
-herramienta. Para poder instalarlo en su sitio, debe asegurarse de tener el gestor de composer instalado en su equipo, una vez
-asegurada la existencia de la instalación de composer, en una terminal de sistema debera ejecutar los siguientes comandos.
+#### Carpeta *js*
+Carpeta con los archivos de Javascript custom, eventos y validaciones de formularios.
 
+
+## Instalación 
+Para hacer uso de este demo debe de descargar desde github alguno de los reeleases publicados desde el [listado de releases](https://github.com/compropago/docs-php-sdk/releases), o tambien puede clonar el repositorio con el siguiente comando.
+
+```bash
+git clone https://github.com/compropago/docs-php-sdk
 ```
-$ composer require compropago/simplestore
-$ composer dumpautoload -o
-```
-
-Esto generara en la ruta donde este posicionada su terminal la siguiente estructura.
-
-```
-/ vendor
-|--> composer
-|--> compropago
-|  |--> php-sdk
-|  |--> simplestore
-|--> autoload.php
-/ composer.json
-/ composer.lock
-```
-
-Dentro de nueva estructura generada hay 2 carpetas importantes:
-* `vendor/compropago/php-sdk/`: contiene todos los archivos y librerias de los servicios del SDK de Compropago.
-* `vendor/compropago/simplestore/`: contiene la estructura ya mencionada de Compropago Simplestore
-
 
 ## Configuración
-Una vez instalado `Compropago Simplestore` debe proceder a configurarlo, para esto es necesario que edite los 2 archivos 
-contenidos dentro de `vendor/compropago/simplestore/src/Simplestore/Libraries/`, **compropagoConfig.php** y **displayConfig.php**
-
-#### compropagoConfig.php
-Aqui se encuentran las confguraciones relacionadas con el SDK, que le permitiran tener acceso a los servicios correspondientes
-de compropago, lo unico que debe de hacer, es reemplazar las llaves publica y privada por aquellas que le son proporcionadas
-en su [panel de configuración Compropago][compropago-config-link]
-
-```php
-$compropagoConfig = array(
-    # Llave publica generada por compropago
-    'publickey'=>'pk_test_XXXXXXXXXXXXXXXXX',
-    # Llave privada gerada por compropago
-    'privatekey'=>'sk_test_XXXXXXXXXXXXXXXXX',
-    # Estas generando pruebas? si no es asi cambia el valor a 'true'
-    'live'=>false
-);
+Para configurar el demo con su cuenta de compropago debe de editar el archivo **composer.json** que se encuentra en la raiz de los archivos descargdos de la siguiente forma:
+```json
+{
+  "public_key": "pk_test_xxxxxxxxxxxxx",
+  "private_key": "sk_test_xxxxxxxxxxxxxx",
+  "mode": false
+}
 ```
-
-#### displayConfig.php
-En este archivo se encuentran las configurariones visuales del listado de proveedores.
-
-```php
-# Desea ocultar los logos de los proveedores? cambie el valor a 'no'
-$comproData['showlogo'] = "yes";
-# Ingrese una descripcion para la seccion de proveedores
-$comproData['description'] = "";
-# Ingrese las instrucciones que considere pertinentes para la seleccion de proveedores
-$comproData['instrucciones'] = "Seleccione la tienda de conveniencia en la cual desea realizar su pago";
-```
-
-Una vez configurados estor archivos tendra a `Compropago Simplestore` funcionando y listao para usarse.
-
-## Recomendaciones finales
-Para acceder al checkout del `Compropago Simplestore` debera de acceder al archivo `index.php` por algunos de 
-los siguientes 2 metodos
-
-##### Tag iframe
-```html
-<iframe src="path/index.php"></iframe>
-```
-
-##### Redirección mediante headers u otro metodo de redirección
-```php
-<?php
-  header("Location: path/index.php");
-?>
-```
-
-En ambos casos `path` hace referencia a la dirección absoluta o relativa donde esta continido el archivo index.php de 
-`Compropago Simplestore`
+Donde **public_key** y **private_key** hacen referencia a las llaves publica y privada del modo en que se encuentra su panel de ComproPago, y **mode** al modo en que se encuentra el panel siendo *true* modo activo y *false* modo pruebas.
 
 
 [compropago-config-link]: https://compropago.com/panel/configuracion
 [compropago-link]: https://packagist.org/packages/compropago/php-sdk
 [composer-link]: https://getcomposer.org/
-[skeleton-link]: http://getskeleton.com/
+[bower-link]: https://bower.io/
+[milligram-link]: https://milligram.github.io
 [jquery-link]: https://jquery.com/
