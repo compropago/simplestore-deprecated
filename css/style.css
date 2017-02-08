@@ -1,0 +1,32 @@
+.cp-provider{
+    float: left;
+    display: block;
+    width: 75px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    border-radius: 3px;
+    position: relative;
+    transition: all .2s linear;
+    box-shadow: none;
+    cursor: pointer;
+    opacity: 0.7}
+.cp-provider:hover{
+    opacity: 1}
+.cp-provider.cp-selected{
+    box-shadow: 0 0 6px 3px #00aaef;
+    opacity: 1;}
+.cp-provider img {
+    display: block;
+    margin: 0 auto;
+    float: none;
+    width: 100%}
+.button.expand{
+    width: 100%;}
+.text-center {
+    text-align: center;}
+blockquote {
+    border-left: 0.3rem solid #9B4DCA;
+    background: #F9FAFB;
+    border-top: 1px solid #DEDEDE;
+    border-right: 1px solid #DEDEDE;
+    border-bottom: 1px solid #DEDEDE}
