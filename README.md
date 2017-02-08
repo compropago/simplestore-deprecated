@@ -14,7 +14,7 @@ de Compropago, en la cual se muestra el proseso claro de checkout y sus pasos.
 ### Librerias utilizadas
 | Libreria            | Metodo de instalación       | Pakage               | Version | Enlaces                  |
 |---------------------|-----------------------------|----------------------|---------|--------------------------| 
-| Compropago php-sk   | [Composer][composer-link]   | `compropago/php-sdk` | 3.0.3   | [LINK][compropago-link]  |
+| Compropago php-sdk  | [Composer][composer-link]   | `compropago/php-sdk` | 3.0.3   | [LINK][compropago-link]  |
 | Milligram framework | [Bower][bower-link]         | `milligram`          | 1.3.0   | [LINK][milligram-link]   |
 | JQuery              | [Bower][bower-link]         | `jquery`             | 3.1.1   | [LINK][jquery-link]      |
 
